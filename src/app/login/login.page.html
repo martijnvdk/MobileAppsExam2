@@ -1,0 +1,72 @@
+<!--
+  Made by:
+  Martijn van de Kamer
+  1803202
+ -->
+
+<ion-header>
+  <ion-toolbar>
+    <div class="ion-padding">
+      <ion-title><b>Login to MyCV</b></ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-row>
+    <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
+      offset-xl="4">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title class="ion-text-center">Existing user</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+
+          <form class="form" [formGroup]="validations_form" (ngSubmit)="loginUser(validations_form.value)">
+
+            <ion-item lines="none">
+              <ion-label position="stacked">Email</ion-label>
+              <ion-input type="text" formControlName="email"></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.email">
+                <div class="error-message"
+                  *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div>
+
+            <ion-item lines="none">
+              <ion-label position="stacked">Password</ion-label>
+              <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.password">
+                <div class="error-message"
+                  *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div>
+
+            <ion-button class="submit-btn" type="submit" [disabled]="!validations_form.valid" expand="block">Log In</ion-button>
+            <div class="ion-padding"></div>
+
+            <label class="error-message">{{errorMessage}}</label>
+          </form>
+          <div class="ion-padding"></div>
+          <ion-text>
+            If you don't have an account, please <a (click)="goToRegisterPage()">register</a> first.
+          </ion-text>
+          <div class="ion-padding"></div>
+          <ion-text>
+            For instructions on how to use this app, click <a (click)="goToHelpPage()">here</a>.
+          </ion-text>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,18 @@
+ion-toolbar {
+    --background: #C0CCDA;
+  }
+  
+  ion-title {
+    --color: white;
+  }
+  
+  ion-content {
+    --background: rgb(255, 255, 255);
+  }
+
+  .bottom {
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    right: 0;
+  }

@@ -1,0 +1,86 @@
+<!--
+  Made by:
+  Martijn van de Kamer
+  1803202
+ -->
+
+<ion-header>
+  <ion-toolbar>
+    <div class="ion-padding">
+      <ion-title><b>MyCV</b></ion-title>
+    </div>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card color="light">
+    <ion-card-header color="primary">
+      <ion-text class="card-title">Name</ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-padding"></div>
+      <ion-text class="card-content">Martijn van de Kamer</ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header color="primary">
+      <ion-text class="card-title">Address</ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-padding"></div>
+      <ion-text class="card-content"><a href="https://www.google.nl/maps/@60.1857843,24.944384,12.56z">Ryytimaantie 11 A
+          10 <br> 00320 Helsinki</a></ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header color="primary">
+      <ion-text class="card-title">Phone number</ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-padding"></div>
+      <ion-text class="card-content" (click)="callNow('+3584578712292')">045 7871 2292</ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header color="primary">
+      <ion-text class="card-title">Email</ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-padding"></div>
+      <ion-text class="card-content"><a
+          href="mailto:martijn.van.de.kamer@student.laurea.fi">Martijn.van.de.Kamer@student.laurea.fi</a></ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header color="primary">
+      <ion-text class="card-title">GitHub</ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-padding"></div>
+      <ion-text class="card-content"><a href="https://github.com/martijnvdk">https://github.com/martijnvdk</a>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header color="primary">
+      <ion-text class="card-title">LinkedIn</ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-padding"></div>
+      <ion-text class="card-content"><a
+          href="https://linkedin.com/in/martijnvdkamer">https://linkedin.com/in/martijnvdkamer</a></ion-text>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>

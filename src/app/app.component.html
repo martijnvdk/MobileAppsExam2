@@ -1,0 +1,48 @@
+<!--
+  Made by:
+  Martijn van de Kamer
+  1803202
+ -->
+
+<ion-app>
+
+  <!-- Hamburger menu start -->
+
+  <ion-menu contentId="content1" side="start">
+    <ion-header>
+      <ion-toolbar>
+        <div class="ion-padding">
+          <ion-title><b>MyCV</b></ion-title>
+        </div>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list lines="none">
+        <ion-menu-toggle autoHide="true">
+          <ion-item href="/members/about">
+            <ion-icon name="home" slot="start"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <div class="ion-padding"></div>
+        <ion-menu-toggle autoHide="true">
+          <ion-item href="/help">
+            <ion-icon name="help-circle" slot="start"></ion-icon>
+            <ion-label>Help</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+    <ion-footer>
+      <ion-menu-toggle autoHide="true">
+        <ion-item color="danger" (click)="logout()">
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          <ion-label>Sign out</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-footer>
+  </ion-menu>
+
+  <!-- Hamburger menu end -->
+  <ion-router-outlet id="content1" main></ion-router-outlet>
+</ion-app>
