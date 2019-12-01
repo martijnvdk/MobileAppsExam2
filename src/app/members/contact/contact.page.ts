@@ -1,3 +1,7 @@
+/* Made by:
+  Martijn van de Kamer
+  1803202 */
+
 import { Component } from '@angular/core';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 

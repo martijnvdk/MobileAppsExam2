@@ -18,6 +18,8 @@ export class RegisterPage implements OnInit {
   errorMessage: string = '';
   successMessage: string = '';
 
+    // Messages in case there's something wrong with the input
+
   validation_messages = {
     'email': [
       { type: 'required', message: 'Email is required.' },
@@ -36,13 +38,16 @@ export class RegisterPage implements OnInit {
   ) { }
 
   ngOnInit() {
+
+        // Validate the iput so it only allows alphanumerical characters with a minimum of 6 characters
+
     this.validations_form = this.formBuilder.group({
       email: new FormControl('', Validators.compose([
         Validators.required,
         Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
       ])),
       password: new FormControl('', Validators.compose([
-        Validators.minLength(5),
+        Validators.minLength(6),
         Validators.required
       ])),
     });

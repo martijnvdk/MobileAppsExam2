@@ -34,3 +34,17 @@ ion-card {
 a {
     color: black;
 }
+
+ion-tab-bar {
+    --background: #C0CCDA
+}
+
+ion-tab-button {
+    --color: rgb(238, 238, 238);
+    --background: #C0CCDA;
+}
+
+.selected {
+    color: white;
+    border-bottom: white solid 3px;
+}

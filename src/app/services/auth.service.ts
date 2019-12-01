@@ -5,14 +5,12 @@ Martijn van de Kamer
 import { Injectable } from "@angular/core";
 import * as firebase from 'firebase/app';
 import { NavController } from '@ionic/angular';
-import { Observable } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  public user: Observable<any>;
 
   constructor(private navCtrl: NavController) { 
   }

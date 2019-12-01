@@ -1,0 +1,75 @@
+<!--
+  Made by:
+  Martijn van de Kamer
+  1803202
+ -->
+
+<ion-header>
+  <ion-toolbar>
+    <div class="ion-padding">
+      <ion-title><b>MyCV</b></ion-title>
+    </div>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar>
+  <ion-tab-bar>
+    <ion-tab-button tab="resume">
+      <ion-icon name="construct"></ion-icon>
+      <ion-label>TECHNICAL SKILLS</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="resume/soft-skills" class="selected">
+      <ion-icon name="people"></ion-icon>
+      <ion-label>SOFT SKILLS</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-toolbar>
+
+<ion-content>
+
+  <ion-card color="light">
+    <ion-card-header color="primary">
+      <ion-text class="card-title">Language skills</ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-padding"></div>
+      <ion-text class="card-content">
+        <ion-grid>
+          <ion-row>
+            <ion-col>Dutch</ion-col>
+            <ion-col>Mother tongue</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>English</ion-col>
+            <ion-col>Native level</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>Finnish</ion-col>
+            <ion-col>Beginner</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light">
+      <ion-card-header color="primary">
+        <ion-text class="card-title">Other interpersonal skills</ion-text>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="ion-padding"></div>
+        <ul class="card-content">
+          <li>Communication</li>
+          <li>Teamwork</li>
+          <li>Problem solving</li>
+          <li>Helpfulness</li>
+          <li>Patience</li>
+          <li>Open-mindedness</li>
+          <li>Time management</li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

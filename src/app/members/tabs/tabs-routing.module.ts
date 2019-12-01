@@ -1,6 +1,6 @@
-  /* Made by:
-  Martijn van de Kamer
-  1803202 */
+/* Made by:
+Martijn van de Kamer
+1803202 */
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -35,7 +35,17 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../resume/resume.module').then(m => m.ResumePageModule)
+              import('../technical-skills/technical-skills.module').then(m => m.TechnicalSkillsPageModule)
+          },
+          {
+            path: 'soft-skills',
+            children: [
+              {
+                path: '',
+                loadChildren: () =>
+                  import('../soft-skills/soft-skills.module').then(m => m.SoftSkillsPageModule)
+              }
+            ]
           }
         ]
       },
@@ -45,7 +55,17 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../projects/projects.module').then(m => m.ProjectsPageModule)
+              import('../personal-projects/personal-projects.module').then(m => m.PersonalProjectsPageModule)
+          },
+          {
+            path: 'team-projects',
+            children: [
+              {
+                path: '',
+                loadChildren: () =>
+                  import('../team-projects/team-projects.module').then(m => m.TeamProjectsPageModule)
+              }
+            ]
           }
         ]
       },
@@ -67,4 +87,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }
